@@ -1,7 +1,7 @@
 # X Profile - Lobster General Intelligence
 
 ## Assets
-- PFP: `/root/clawd/journey/assets/lgi-pfp-v2.png`
+- PFP: `pfp.png`
 - Banner: `banner.png` (1500x500)
 
 ## Color Palette (from PFP)

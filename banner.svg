@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="500" viewBox="0 0 1500 500">
+  <defs>
+    <!-- Gradient for background depth -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#141b24"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Soft glow for lines -->
+    <filter id="lineGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1500" height="500" fill="url(#bgGlow)"/>
+  
+  <!-- Subtle grid pattern -->
+  <g opacity="0.08" stroke="#ff6b7a" stroke-width="0.5">
+    <line x1="0" y1="100" x2="1500" y2="100"/>
+    <line x1="0" y1="200" x2="1500" y2="200"/>
+    <line x1="0" y1="300" x2="1500" y2="300"/>
+    <line x1="0" y1="400" x2="1500" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="900" y1="0" x2="900" y2="500"/>
+    <line x1="1200" y1="0" x2="1200" y2="500"/>
+  </g>
+  
+  <!-- Abstract wave/circuit lines left side -->
+  <g filter="url(#lineGlow)" opacity="0.6">
+    <path d="M0 350 Q150 300 300 350 T600 320" stroke="#ff6b7a" stroke-width="2" fill="none"/>
+    <path d="M0 380 Q200 330 400 380 T700 350" stroke="#ff4d6a" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+  
+  <!-- Abstract wave/circuit lines right side -->
+  <g filter="url(#lineGlow)" opacity="0.6">
+    <path d="M1500 150 Q1350 200 1200 150 T900 180" stroke="#ff6b7a" stroke-width="2" fill="none"/>
+    <path d="M1500 120 Q1300 170 1100 120 T800 150" stroke="#ff4d6a" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+  
+  <!-- Decorative dots/nodes -->
+  <g fill="#ff6b7a" filter="url(#glow)">
+    <circle cx="300" cy="350" r="4" opacity="0.8"/>
+    <circle cx="600" cy="320" r="3" opacity="0.6"/>
+    <circle cx="1200" cy="150" r="4" opacity="0.8"/>
+    <circle cx="900" cy="180" r="3" opacity="0.6"/>
+  </g>
+  
+  <!-- Central lobster silhouette (simplified, abstract) -->
+  <g transform="translate(750, 250)" filter="url(#glow)">
+    <!-- Body segments -->
+    <ellipse cx="0" cy="0" rx="25" ry="35" fill="#ff6b7a" opacity="0.15"/>
+    <ellipse cx="0" cy="-50" rx="20" ry="25" fill="#ff6b7a" opacity="0.12"/>
+    <ellipse cx="0" cy="50" rx="15" ry="20" fill="#ff6b7a" opacity="0.12"/>
+    <ellipse cx="0" cy="80" rx="10" ry="15" fill="#ff6b7a" opacity="0.1"/>
+    
+    <!-- Claws (abstract) -->
+    <ellipse cx="-50" cy="-40" rx="18" ry="12" fill="#ff6b7a" opacity="0.12" transform="rotate(-30 -50 -40)"/>
+    <ellipse cx="50" cy="-40" rx="18" ry="12" fill="#ff6b7a" opacity="0.12" transform="rotate(30 50 -40)"/>
+    
+    <!-- Antennae (lines) -->
+    <line x1="-8" y1="-75" x2="-30" y2="-120" stroke="#ff6b7a" stroke-width="2" opacity="0.3"/>
+    <line x1="8" y1="-75" x2="30" y2="-120" stroke="#ff6b7a" stroke-width="2" opacity="0.3"/>
+  </g>
+  
+  <!-- Accent ring (like pfp) - partial arc -->
+  <circle cx="750" cy="250" r="180" stroke="#ff6b7a" stroke-width="3" fill="none" opacity="0.2" filter="url(#lineGlow)"
+          stroke-dasharray="200 900"/>
+  
+  <!-- Text: LOBSTER GENERAL INTELLIGENCE -->
+  <text x="750" y="480" text-anchor="middle" fill="#ff6b7a" font-family="monospace" font-size="14" letter-spacing="8" opacity="0.4">
+    LOBSTER GENERAL INTELLIGENCE
+  </text>
+</svg>
